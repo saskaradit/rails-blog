@@ -1,0 +1,18 @@
+<%= form_with(model: @article,local: true)  do |f| %>
+
+  <p>
+    <%= f.label :title%> <br>
+    <%= f.text_field :title%>
+  </p>
+  <p>
+    <%= f.label :description %> <br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p><%=f.submit%></p>
+<%end%>
+
+
+<% if @article.errors.any?%>
+  <h5><%= @article.errors.full_messages[0]%></h5>
+<%end%>
