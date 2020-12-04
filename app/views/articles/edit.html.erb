@@ -1,6 +1,6 @@
-<h1>Create new article</h1>
+<h1>Edit article</h1>
 
-<%= form_with scope: :article, url: articles_path, local: true do |f| %>
+<%= form_with(model: @article,local: true)  do |f| %>
 
   <p>
     <%= f.label :title%> <br>
@@ -13,7 +13,6 @@
 
   <p><%=f.submit%></p>
 <%end%>
-<%= link_to 'Back', articles_path%> 
 
 <% if @article.errors.any?%>
   <h5><%= @article.errors.full_messages[0]%></h5>
