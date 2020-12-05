@@ -1,5 +1,21 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar{
-    background-color: #f4f4f4;
+    background-color: black !important;
+    color: white !important;
+}
+.navbar-toggler-icon{
+    background-color: orange !important;
+}
+.nav-link{
+    color: white !important;
+}
+#logo{
+    color: orange;
+}
+#home-container{
+    margin-top: 1rem;
+}
+footer a {
+    color: #333 !important;
 }
