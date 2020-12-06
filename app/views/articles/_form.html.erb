@@ -23,7 +23,7 @@
       <div class="form-group row justify-content-center">
         <%= link_to 'Back', articles_path%> 
       </div>
-        <%= render 'shared/errors'%>
+        <%= render 'shared/errors', obj: @article %>
     </div>
   </div>
 </div>

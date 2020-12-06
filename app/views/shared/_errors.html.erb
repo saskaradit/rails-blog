@@ -1,5 +1,5 @@
-<% if @article.errors.any?%>
+<% if obj.errors.any?%>
   <div class="alert alert-danger" role="alert">
-     <h6 class="alert-heading"><%= @article.errors.full_messages[0]%></h6>
+     <h6 class="alert-heading"><%= obj.errors.full_messages[0]%></h6>
   </div> 
 <%end%>
