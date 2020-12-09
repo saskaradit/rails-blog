@@ -20,22 +20,26 @@ footer a {
     color: #333 !important;
 }
 
+.text-warning{
+  color: orange !important;
+}
+
 // Pagination
 
 .apple_pagination {
-    background: #f1f1f1;
-    border: 1px solid #e5e5e5;
     text-align: center;
     padding: 1em;
-    cursor: default; }
+    cursor: default; 
+  }
     .apple_pagination a, .apple_pagination span {
-      padding: 0.2em 0.3em; }
+      padding: 0.2em 0.3em; 
+    }
     .apple_pagination .disabled {
-      color: #aaaaaa; }
+      color: #aaaaaa; 
+    }
     .apple_pagination .current {
+      color: orange;
       font-style: normal;
-      font-weight: bold;
-      background-color: #bebebe;
       display: inline-block;
       width: 1.4em;
       height: 1.4em;
@@ -43,9 +47,12 @@ footer a {
       -moz-border-radius: 1em;
       -webkit-border-radius: 1em;
       border-radius: 1em;
-      text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+    }
     .apple_pagination a {
       text-decoration: none;
-      color: black; }
+      color: black; 
+    }
       .apple_pagination a:hover, .apple_pagination a:focus {
-        color: orange; }
+        color: orange;
+        filter: brightness(1.2);
+      }

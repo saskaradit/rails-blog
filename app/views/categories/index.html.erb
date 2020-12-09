@@ -1,0 +1,27 @@
+<h1 class="m-4 text-center">Categories</h1>
+
+<div class="container mb-3">
+  <% @categories.each do |category| %>
+    <div class="row justify-content-md-center">
+      <div class="col-4 m-3">
+        <div class="card shadow bg-white rounded">
+          <div class="card-body">
+            <h5 class="card-title text-center"><%= link_to category.name, category_path(category),class:"text-warning"%></h5>
+          </div>
+          <div class="card-footer text-muted text-center">
+          <small>Created <%= time_ago_in_words(category.created_at)%> ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  <%end%>
+  <% if logged_in?%>
+    <div class="form-group row justify-content-center">
+      <%= link_to 'Add New', new_article_path, class:"btn btn-primary m-3" %>
+    </div>
+  <%end%>
+</div>
+
+<div class="apple_pagination mb-5">
+    <%= will_paginate @categories, :container=>false%>   
+</div>
