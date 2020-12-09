@@ -1,0 +1,25 @@
+<h1 class="m-4 text-center">Create A New Category </h1>
+
+
+<div class="container mb-3">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <%= form_with(model: @category,local: true)  do |f| %>
+        <div class="form-group row">
+            <%= f.label :name, "Category Name" , class:"col-2 col-form-label" %> 
+            <div class="col-10">
+              <%= f.text_field :name, class: "form-control", placeholder: "enter a category name" %>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <%=f.submit class:"btn btn-primary" %>
+        </div>
+      <%end%>
+      <div class="form-group row justify-content-center">
+        <%= link_to 'Back', articles_path%> 
+      </div>
+        <%= render 'shared/errors', obj: @category %>
+    </div>
+  </div>
+</div>
