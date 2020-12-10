@@ -15,7 +15,7 @@
       </div>
     </div>
   <%end%>
-  <% if logged_in?%>
+  <% if logged_in?  && current_user.admin? %>
     <div class="form-group row justify-content-center">
       <%= link_to 'Add New', new_article_path, class:"btn btn-primary m-3" %>
     </div>
