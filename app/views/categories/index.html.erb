@@ -7,6 +7,7 @@
         <div class="card shadow bg-white rounded">
           <div class="card-body">
             <h5 class="card-title text-center"><%= link_to category.name, category_path(category),class:"text-warning"%></h5>
+            <p class="card-text text-center"><%= pluralize(category.articles.count,"article")%></p>
           </div>
           <div class="card-footer text-muted text-center">
           <small>Created <%= time_ago_in_words(category.created_at)%> ago</small>
