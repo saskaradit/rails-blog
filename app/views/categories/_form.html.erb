@@ -8,13 +8,12 @@
                 <%= f.text_field :name, class: "form-control", placeholder: "enter a category name" %>
             </div>
         </div>
-
         <div class="form-group row justify-content-center">
             <%=f.submit class:"btn btn-primary" %>
         </div>
         <%end%>
         <div class="form-group row justify-content-center">
-        <%= link_to 'Back', category_path(@category)%> 
+        <%= link_to 'Back', categories_path(@category)%> 
         </div>
         <%= render 'shared/errors', obj: @category %>
     </div>
